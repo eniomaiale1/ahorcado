@@ -6,5 +6,5 @@ get '/' do
 end
 
 post '/juego' do
-    "Simple Hang v2.0 iniciado"
+    erb :juego
 end

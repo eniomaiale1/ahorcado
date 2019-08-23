@@ -4,6 +4,7 @@ Given(/^que abri la aplicacion$/) do
   end
   
   When(/^inicio el juego$/) do
+    click_button("Iniciar juego")
   end
 
   Then(/^debo ver un titulo de bienvenida "([^"]*)"$/) do |arg1|

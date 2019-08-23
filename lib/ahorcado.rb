@@ -1,7 +1,8 @@
 class Ahorcado
     
-    def initialize
-        @palabra = ""
+    def initialize palabra = "Napoleon"
+        #palabras["Napoleon","Porfirio","Platon"]
+        @palabra = palabra
     end
 
     def verificarLetra letra

@@ -18,5 +18,6 @@ get '/configurar/:palabra' do |palabra|
 end
 
 post '/verificar' do
-    "Letra contenida en la palabra"
+    session['letra'] = "Letra contenida en la palabra"
+    erb :juego
 end

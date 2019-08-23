@@ -21,4 +21,19 @@ Given(/^que abri la aplicacion$/) do
   
   Then(/^debo ver la palabra como "([^"]*)"$/) do |asteriscos|
     expect(page.body).to match /#{asteriscos}/m
+
+  Given(/^la palabra almacenada es "([^"]*)"$/) do |palabra|
+    visit "/configurar/#{palabra}"
+  end
+
+  When(/^introduzco el caracar "([^"]*)" en "([^"]*)"$/) do |caracter,campo|
+    fill_in(campo, :with => caracter)
+  end
+
+  When(/^envio la letra$/) do
+    click_button("Verificar")
+  end
+
+  Then(/^debo ver un mensaje "([^"]*)"$/) do |mensaje|
+    expect(page.body).to match /#{mensaje}/m
   end

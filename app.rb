@@ -1,11 +1,14 @@
 require 'sinatra'
 require './config'
+require './lib/ahorcado.rb'
 
 get '/' do
     erb :index
 end
 
 post '/juego' do
+    ahorcado = Ahorcado.new
+    session['secreto'] = ahorcado.obtenerPalabra
     erb :juego
 end
 

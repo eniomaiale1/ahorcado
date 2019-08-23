@@ -14,4 +14,9 @@ describe Ahorcado do
         ahorcado = Ahorcado.new ""
         expect(ahorcado.obtenerPalabra).to eq 'Napoleon'
     end
+    # it "la palabra regresada existe dentro del conjunto de palabras" do
+    #     ahorcado = Ahorcado.new ""
+
+    #     expect(ahorcado.obtenerPalabra).to eq 'Napoleon'
+    # end
 end

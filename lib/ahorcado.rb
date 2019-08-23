@@ -19,4 +19,12 @@ class Ahorcado
     def obtenerPalabra
         @palabra
     end
+
+    def enmascararPalabra
+        enmascarado = ""
+        @palabra.split('').each do |caracter|
+            enmascarado += "_ "
+        end
+        enmascarado
+    end
 end

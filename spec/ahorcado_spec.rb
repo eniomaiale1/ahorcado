@@ -21,6 +21,11 @@ describe Ahorcado do
         ahorcado = Ahorcado.new ""
         expect(ahorcado.obtenerPalabra).to eq 'Napoleon'
     end
+
+    it "puedo enmascarar mi palabra secreta por espacios y guiones" do
+        ahorcado = Ahorcado.new "Agua"
+        expect(ahorcado.enmascararPalabra).to eq '_ _ _ _ '
+    end
     # it "la palabra regresada existe dentro del conjunto de palabras" do
     #     ahorcado = Ahorcado.new ""
 

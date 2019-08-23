@@ -1,6 +1,7 @@
 class Ahorcado
+    
     def initialize
-
+        @palabra = ""
     end
 
     def verificarLetra letra
@@ -8,5 +9,6 @@ class Ahorcado
     end
 
     def obtenerPalabra
+        @palabra
     end
 end

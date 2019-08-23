@@ -7,8 +7,8 @@ get '/' do
 end
 
 post '/juego' do
-    ahorcado = Ahorcado.new
-    session['secreto'] = ahorcado.obtenerPalabra
+    session['ahorcado'] = Ahorcado.new
+    session['secreto'] = session['ahorcado'].obtenerPalabra
     session['enmascarada'] = "_ _ _ _"
     erb :juego
 end
@@ -19,5 +19,6 @@ get '/configurar/:palabra' do |palabra|
 end
 
 post '/verificar' do
-    "Letra contenida en la palabra"
+    session['letra'] = "Letra contenida en la palabra"
+    erb :juego
 end

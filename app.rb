@@ -3,6 +3,8 @@ require './config'
 require './lib/ahorcado.rb'
 
 get '/' do
+    session['ahorcado'] = nil
+    session['mensaje'] = ""
     erb :index
 end
 

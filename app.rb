@@ -16,12 +16,13 @@ post '/juego' do
 end
 
 get '/configurar/:palabra' do |palabra|
-    session['secreto'] = palabra
+    session['ahorcado'] = Ahorcado.new palabra
+    session['secreto'] = session['ahorcado'].obtenerPalabra
     erb :juego
 end
 
 post '/verificar' do
-    session['enmascarada'] = "A _ _ a"
+    session['enmascarada'] = session['ahorcado'].actualizaMascara params['letra']
     session['mensaje'] = "Letra contenida en la palabra"
     erb :juego
 end

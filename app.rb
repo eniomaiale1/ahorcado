@@ -7,8 +7,8 @@ get '/' do
 end
 
 post '/juego' do
-    ahorcado = Ahorcado.new
-    session['secreto'] = ahorcado.obtenerPalabra
+    session['ahorcado'] = Ahorcado.new
+    session['secreto'] = session['ahorcado'].obtenerPalabra
     erb :juego
 end
 

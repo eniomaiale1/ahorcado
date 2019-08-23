@@ -10,4 +10,8 @@ describe Ahorcado do
         ahorcado = Ahorcado.new "Agua"
         expect(ahorcado.obtenerPalabra).to eq 'Agua'
     end
+    it "No puedo fijar palabras vacias" do
+        ahorcado = Ahorcado.new ""
+        expect(ahorcado.obtenerPalabra).to eq 'Napoleon'
+    end
 end

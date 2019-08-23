@@ -14,3 +14,11 @@ Given(/^que abri la aplicacion$/) do
   Then(/^debo ver un titulo de juego iniciado "([^"]*)"$/) do |titulo|
     expect(page.body).to match /#{titulo}/m
   end
+
+  Given(/^que ya tengo una "([^"]*)"$/) do |palabra|
+    expect(page.body).to match /#{palabra}/m
+  end
+  
+  Then(/^debo ver la palabra como "([^"]*)"$/) do |asteriscos|
+    expect(page.body).to match /#{asteriscos}/m
+  end

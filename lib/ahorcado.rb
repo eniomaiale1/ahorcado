@@ -27,4 +27,16 @@ class Ahorcado
         end
         enmascarado
     end
+
+    def actualizaMascara letra
+        enmascarado = ""
+        @palabra.split('').each do |caracter|
+            if letra.downcase == caracter.downcase
+                enmascarado += "#{caracter} "
+            else
+                enmascarado += "_ "
+            end
+        end
+        enmascarado
+    end
 end

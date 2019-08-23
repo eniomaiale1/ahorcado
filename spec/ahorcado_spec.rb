@@ -32,6 +32,11 @@ describe Ahorcado do
         result = ahorcado.verificarLetra "B"
         expect(result).to eq 'Letra no contenida en la palabra'
     end
+
+    it "veo las letras correctas en la mascara" do
+        ahorcado = Ahorcado.new "Agua"
+        expect(ahorcado.actualizaMascara 'A').to eq 'A _ _ a '
+    end
     # it "la palabra regresada existe dentro del conjunto de palabras" do
     #     ahorcado = Ahorcado.new ""
 

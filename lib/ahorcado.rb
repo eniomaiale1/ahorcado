@@ -1,8 +1,11 @@
 class Ahorcado
     
     def initialize palabra = "Napoleon"
-        #palabras["Napoleon","Porfirio","Platon"]
-        @palabra = palabra
+        if palabra.length == 0
+            @palabra = "Napoleon"
+        else
+            @palabra = palabra
+        end
     end
 
     def verificarLetra letra

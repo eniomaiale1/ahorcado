@@ -15,6 +15,13 @@ Given(/^que abri la aplicacion$/) do
     expect(page.body).to match /#{titulo}/m
   end
 
+  #Given(/^que ya tengo una "([^"]*)"$/) do |palabra|
+  #  expect(page.body).to match /#{palabra}/m
+  #end
+  
+  #Then(/^debo ver la palabra como "([^"]*)"$/) do |asteriscos|
+  #  expect(page.body).to match /#{asteriscos}/m
+
   Given(/^la palabra almacenada es "([^"]*)"$/) do |palabra|
     visit "/configurar/#{palabra}"
   end

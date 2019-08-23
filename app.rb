@@ -21,6 +21,6 @@ get '/configurar/:palabra' do |palabra|
 end
 
 post '/verificar' do
-    session['mensaje'] = "Letra contenida en la palabra"
+    session['mensaje'] = session['ahorcado'].verificarLetra session['letra']
     erb :juego
 end

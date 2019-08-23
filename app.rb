@@ -9,6 +9,7 @@ end
 post '/juego' do
     session['ahorcado'] = Ahorcado.new
     session['secreto'] = session['ahorcado'].obtenerPalabra
+    session['enmascarada'] = "_ _ _ _"
     erb :juego
 end
 

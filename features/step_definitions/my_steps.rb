@@ -15,6 +15,10 @@ Given(/^que abri la aplicacion$/) do
     expect(page.body).to match /#{titulo}/m
   end
 
+  Then(/^debo ver la palabra como "([^"]*)"$/) do |enmascarada|
+    expect(page.body).to match /#{enmascarada}/m
+  end
+
   #Given(/^que ya tengo una "([^"]*)"$/) do |palabra|
   #  expect(page.body).to match /#{palabra}/m
   #end
